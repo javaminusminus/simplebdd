@@ -5,6 +5,7 @@ Super simple behavior-driven development style test writer for [Java--](https://
 ## Usage
 
 ```java
+// My_test.java
 package path.to.package;
 
 import github.com.javaminusminus.simplebdd.Test;
