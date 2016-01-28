@@ -1,0 +1,1 @@
+source ~/.jmm/jmm.sh
