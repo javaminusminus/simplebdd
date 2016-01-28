@@ -25,6 +25,12 @@ public class My_test extends Test {
 
     jmm test ./My_test.java
 
+    github.com.javaminusminus.jmmexample.Helloworld_test
+
+        ✓ should return the congratulations text
+
+    ✓ 1 tests complete
+
 ### Extend Test
 
 To create a test extend the Test class and create an instance of it in the main method.
