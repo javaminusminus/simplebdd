@@ -84,6 +84,10 @@ public class Test {
         this.results = a;
     }
 
+    private void resultFailure() {
+        this.results[this.results.length-1].failed = true;
+    }
+
     private void resultFailure(Object a, Object b) {
         this.results[this.results.length-1].expected = a;
         this.results[this.results.length-1].got = b;
@@ -103,8 +107,10 @@ public class Test {
         try {
             method.invoke(this);
         } catch (IllegalAccessException e) {
+            this.resultFailure()
             System.out.println(e.getCause());
         } catch (InvocationTargetException e) {
+            this.resultFailure()
             System.out.println(e.getCause());
         }
         this.executeAfterEach();
