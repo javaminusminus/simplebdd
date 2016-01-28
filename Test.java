@@ -107,10 +107,10 @@ public class Test {
         try {
             method.invoke(this);
         } catch (IllegalAccessException e) {
-            this.resultFailure()
+            this.resultFailure();
             System.out.println(e.getCause());
         } catch (InvocationTargetException e) {
-            this.resultFailure()
+            this.resultFailure();
             System.out.println(e.getCause());
         }
         this.executeAfterEach();
