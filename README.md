@@ -1,5 +1,7 @@
 # SimpleBDD
 
+[![Build Status](https://travis-ci.org/javaminusminus/simplebdd.svg?branch=master)](https://travis-ci.org/javaminusminus/simplebdd)
+
 Super simple behavior-driven development style test writer for [Java--](https://github.com/javaminusminus/jmm).
 
 ## Usage
