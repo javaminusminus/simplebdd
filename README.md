@@ -4,6 +4,8 @@ Super simple behavior-driven development style test writer for [Java--](https://
 
 ## Usage
 
+Create a test file.
+
 ```java
 // My_test.java
 package path.to.package;
@@ -23,7 +25,11 @@ public class My_test extends Test {
 }
 ```
 
+Run the jmm test command.
+
     jmm test ./My_test.java
+
+Read the results.
 
     github.com.javaminusminus.jmmexample.Helloworld_test
 
