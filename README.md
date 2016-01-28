@@ -6,7 +6,6 @@ Super simple behavior-driven development style test writer for [Java--](https://
 
 ```java
 public class My_test extends Test {
-
     public static void main(String[] args) {
         My_test test = new My_test();
         test.run();
@@ -24,7 +23,6 @@ public class My_test extends Test {
 
 ```java
 public class My_test extends Test {
-
     public static void main(String[] args) {
         My_test test = new My_test();
         test.run();
