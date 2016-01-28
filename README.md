@@ -20,6 +20,19 @@ public class My_test extends Test {
 }
 ```
 
+### Extend Test
+
+```java
+public class My_test extends Test {
+
+    public static void main(String[] args) {
+        My_test test = new My_test();
+        test.run();
+        test.report();
+    }
+}
+```
+
 ### testXXX()
 
 ```java
@@ -29,10 +42,55 @@ public void testName() {
 }
 ```
 
+#### should()
+
+```java
+public void testName() {
+    this.should("return that boolean matches boolean");
+    this.assertEqual(true, true);
+}
+```
+
+#### assertEqual()
+
+```java
+this.assertEqual(true, true);
+```
+
+#### assertNotEqual()
+
+```java
+this.assertNotEqual(true, true);
+```
+
 ### before()
+
+```java
+public void before() {
+    // Prep-code
+}
+```
 
 ### beforeEach()
 
+```java
+public void beforeEach() {
+    // Prep-code
+}
+```
+
 ### after()
 
+```java
+public void after() {
+    // Cleanup code
+}
+```
+
 ### afterEach()
+
+```java
+public void afterEach() {
+    // Cleanup code
+}
+```
