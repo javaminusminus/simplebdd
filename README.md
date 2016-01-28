@@ -24,6 +24,8 @@ public class My_test extends Test {
 }
 ```
 
+    jmm test ./My_test.java
+
 ### Extend Test
 
 ```java
