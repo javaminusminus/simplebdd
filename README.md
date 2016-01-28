@@ -1,4 +1,4 @@
-# Simple Behavior Driven Development
+# SimpleBDD
 
 Super simple behavior-driven development style test writer for [Java--](https://github.com/javaminusminus/jmm).
 
