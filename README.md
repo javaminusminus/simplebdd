@@ -5,6 +5,10 @@ Super simple behavior-driven development style test writer for [Java--](https://
 ## Usage
 
 ```java
+package path.to.package;
+
+import github.com.javaminusminus.simplebdd.Test;
+
 public class My_test extends Test {
     public static void main(String[] args) {
         My_test test = new My_test();
