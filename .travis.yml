@@ -1,7 +1,7 @@
 language: java
 script:
-  - git clone https://github.com/javaminusminus/jmm.git ~/.jmm
-  - ./test/run.sh
+  - git clone https://github.com/javaminusminus/jmmtravis.git ~/.jmmtravis
+  - ~/.jmmtravis/stage
 os:
   - linux
   - osx
