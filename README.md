@@ -4,6 +4,10 @@
 
 Super simple behavior-driven development style test writer for [Java--](https://github.com/javaminusminus/jmm).
 
+## Install
+
+    jmm get github.com/javaminusminus/simplebdd
+
 ## Usage
 
 Create a test file.
