@@ -14,7 +14,6 @@ public class My_test extends Test {
     public static void main(String[] args) {
         My_test test = new My_test();
         test.run();
-        test.report();
     }
 
     public void testThatThisIsTrue() {
@@ -28,17 +27,20 @@ public class My_test extends Test {
 
 ### Extend Test
 
+To create a test extend the Test class and create an instance of it in the main method.
+
 ```java
 public class My_test extends Test {
     public static void main(String[] args) {
         My_test test = new My_test();
         test.run();
-        test.report();
     }
 }
 ```
 
 ### testXXX()
+
+Any method that starts with "test" will be executed by SimpleBDD.
 
 ```java
 public void testName() {
@@ -46,7 +48,20 @@ public void testName() {
 }
 ```
 
+#### run()
+
+Runs the test by calling each method that begins with "test" outputting the results to `System.out`. The program will exit with the number of failed tests.
+
+```java
+public static void main(String[] args) {
+    My_test test = new My_test();
+    test.run();
+}
+```
+
 #### should()
+
+Adds a description of what the preceding code "should" do.
 
 ```java
 public void testName() {
@@ -56,6 +71,8 @@ public void testName() {
 
 #### assertEqual()
 
+Used to test if two types are the same. Supported types are Short, Int, Long, Float, Double, Boolean, Char and String.
+
 ```java
 public void testName() {
     this.assertEqual(true, true);
@@ -63,6 +80,8 @@ public void testName() {
 ```
 
 #### assertNotEqual()
+
+Used to test if two types are NOT the same. Supported types are Short, Int, Long, Float, Double, Boolean, Char and String.
 
 ```java
 public void testName() {
@@ -72,6 +91,8 @@ public void testName() {
 
 ### before()
 
+Method called before any test is executed.
+
 ```java
 public void before() {
     // Prep-code
@@ -79,6 +100,8 @@ public void before() {
 ```
 
 ### beforeEach()
+
+Method called before each test is executed.
 
 ```java
 public void beforeEach() {
@@ -88,6 +111,8 @@ public void beforeEach() {
 
 ### after()
 
+Method called after all tests have executed.
+
 ```java
 public void after() {
     // Cleanup code
@@ -95,6 +120,8 @@ public void after() {
 ```
 
 ### afterEach()
+
+Method called after each test has executed.
 
 ```java
 public void afterEach() {

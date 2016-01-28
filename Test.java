@@ -12,7 +12,6 @@ public class Test {
     private Method[] tests = new Method[0];
     private Result[] results = new Result[0];
 
-
     public void run() {
         Method[] methods = this.getClass().getDeclaredMethods();
         for (int i = 0; i < methods.length; i++) {
@@ -30,17 +29,7 @@ public class Test {
             }
         }
         this.executeTests();
-    }
-
-    public void report() {
-        new Report(this.getClass().getName(), this.results);
-        int failures = 0;
-        for (int i = 0; i < this.results.length; i++) {
-            if (this.results[i].failed) {
-                failures++;
-            }
-        }
-        System.exit(failures);
+        report();
     }
 
     public void should(String should) {
@@ -62,6 +51,17 @@ public class Test {
         }
         this.resultFailure(a, b);
         return false;
+    }
+
+    private void report() {
+        new Report(this.getClass().getName(), this.results);
+        int failures = 0;
+        for (int i = 0; i < this.results.length; i++) {
+            if (this.results[i].failed) {
+                failures++;
+            }
+        }
+        System.exit(failures);
     }
 
     private void addTest(Method v) {

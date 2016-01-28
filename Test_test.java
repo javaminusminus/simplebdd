@@ -5,7 +5,6 @@ public class Test_test extends Test {
     public static void main(String[] args) {
         Test_test test = new Test_test();
         test.run();
-        test.report();
     }
 
     public void before() {
