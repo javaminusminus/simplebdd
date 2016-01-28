@@ -37,8 +37,7 @@ public class My_test extends Test {
 
 ```java
 public void testName() {
-    this.should("return that boolean matches boolean");
-    this.assertEqual(true, true);
+    // Test code
 }
 ```
 
@@ -47,20 +46,23 @@ public void testName() {
 ```java
 public void testName() {
     this.should("return that boolean matches boolean");
-    this.assertEqual(true, true);
 }
 ```
 
 #### assertEqual()
 
 ```java
-this.assertEqual(true, true);
+public void testName() {
+    this.assertEqual(true, true);
+}
 ```
 
 #### assertNotEqual()
 
 ```java
-this.assertNotEqual(true, true);
+public void testName() {
+    this.assertNotEqual(false, true);
+}
 ```
 
 ### before()
