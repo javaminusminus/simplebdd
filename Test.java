@@ -29,7 +29,7 @@ public class Test {
             }
         }
         this.executeTests();
-        report();
+        this.report();
     }
 
     public void should(String should) {
