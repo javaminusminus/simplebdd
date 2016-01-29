@@ -5,12 +5,12 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Test {
 
-    private Method before;
-    private Method beforeEach;
-    private Method after;
-    private Method afterEach;
-    private Method[] tests = new Method[0];
-    private Result[] results = new Result[0];
+    protected Method before;
+    protected Method beforeEach;
+    protected Method after;
+    protected Method afterEach;
+    protected Method[] tests = new Method[0];
+    protected Result[] results = new Result[0];
 
     public void run() {
         Method[] methods = this.getClass().getDeclaredMethods();
@@ -53,7 +53,7 @@ public class Test {
         return false;
     }
 
-    private void report() {
+    protected void report() {
         new Report(this.getClass().getName(), this.results);
         int failures = 0;
         for (int i = 0; i < this.results.length; i++) {
@@ -64,7 +64,7 @@ public class Test {
         System.exit(failures);
     }
 
-    private void addTest(Method v) {
+    protected void addTest(Method v) {
         int len = this.tests.length;
         Method[] a = new Method[len + 1];
         a[len] = v;
@@ -74,7 +74,7 @@ public class Test {
         this.tests = a;
     }
 
-    private void resultStart() {
+    protected void resultStart() {
         int len = this.results.length;
         Result[] a = new Result[len + 1];
         a[len] = new Result();
@@ -84,17 +84,17 @@ public class Test {
         this.results = a;
     }
 
-    private void resultFailure() {
+    protected void resultFailure() {
         this.results[this.results.length-1].failed = true;
     }
 
-    private void resultFailure(Object a, Object b) {
+    protected void resultFailure(Object a, Object b) {
         this.results[this.results.length-1].expected = a;
         this.results[this.results.length-1].got = b;
         this.results[this.results.length-1].failed = true;
     }
 
-    private void executeTests() {
+    protected void executeTests() {
         this.executeBefore();
         for (int i = 0; i < this.tests.length; i++) {
             this.executeTest(this.tests[i]);
@@ -102,7 +102,7 @@ public class Test {
         this.executeAfter();
     }
 
-    private void executeTest(Method method) {
+    protected void executeTest(Method method) {
         this.executeBeforeEach();
         try {
             method.invoke(this);
@@ -116,7 +116,7 @@ public class Test {
         this.executeAfterEach();
     }
 
-    private void executeBefore() {
+    protected void executeBefore() {
         if (this.before == null) {
             return;
         }
@@ -129,7 +129,7 @@ public class Test {
         }
     }
 
-    private void executeAfter() {
+    protected void executeAfter() {
         if (this.after == null) {
             return;
         }
@@ -142,7 +142,7 @@ public class Test {
         }
     }
 
-    private void executeBeforeEach() {
+    protected void executeBeforeEach() {
         if (this.beforeEach == null) {
             return;
         }
@@ -155,7 +155,7 @@ public class Test {
         }
     }
 
-    private void executeAfterEach() {
+    protected void executeAfterEach() {
         if (this.afterEach == null) {
             return;
         }

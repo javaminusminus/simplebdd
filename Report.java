@@ -2,13 +2,13 @@ package github.com.javaminusminus.simplebdd;
 
 class Report {
 
-    private String ok = "✓";
-    private String err = "✖";
-    private String colorNormal = "\033[0m";
-    private String colorTitled = "\033[37m";
-    private String colorReport = "\033[90m";
-    private String colorPassed = "\033[92m";
-    private String colorFailed = "\033[31m";
+    protected String ok = "✓";
+    protected String err = "✖";
+    protected String colorNormal = "\033[0m";
+    protected String colorTitled = "\033[37m";
+    protected String colorReport = "\033[90m";
+    protected String colorPassed = "\033[92m";
+    protected String colorFailed = "\033[31m";
 
     Report(String name, Result[] results) {
         int total = results.length;
