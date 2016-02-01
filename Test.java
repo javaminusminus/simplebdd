@@ -118,6 +118,7 @@ public class Test {
         } catch (InvocationTargetException e) {
             this.resultFailure();
             System.out.println(e.getCause());
+            e.printStackTrace(System.out);
         }
         this.executeAfterEach();
     }
@@ -132,6 +133,7 @@ public class Test {
             System.out.println(e.getCause());
         } catch (InvocationTargetException e) {
             System.out.println(e.getCause());
+            e.printStackTrace(System.out);
         }
     }
 
@@ -145,6 +147,7 @@ public class Test {
             System.out.println(e.getCause());
         } catch (InvocationTargetException e) {
             System.out.println(e.getCause());
+            e.printStackTrace(System.out);
         }
     }
 
@@ -158,6 +161,7 @@ public class Test {
             System.out.println(e.getCause());
         } catch (InvocationTargetException e) {
             System.out.println(e.getCause());
+            e.printStackTrace(System.out);
         }
     }
 
@@ -171,6 +175,7 @@ public class Test {
             System.out.println(e.getCause());
         } catch (InvocationTargetException e) {
             System.out.println(e.getCause());
+            e.printStackTrace(System.out);
         }
     }
 }
