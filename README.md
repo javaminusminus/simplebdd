@@ -68,7 +68,7 @@ public void testName() {
 
 #### run()
 
-Runs the test by calling each method that begins with "test" outputting the results to `System.out`. The program will exit with the number of failed tests.
+Runs the test by calling each method that begins with "test" outputting the results to `System.out`. The command will exit with the number of failed tests.
 
 ```java
 public static void main(String[] args) {
