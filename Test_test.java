@@ -4,7 +4,7 @@
 // See the accompanying LICENSE file for terms.
 //
 
-package github.com.javaminusminus.simplebdd;
+package github.com.jminusminus.simplebdd;
 
 public class Test_test extends Test {
 

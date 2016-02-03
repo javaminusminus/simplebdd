@@ -4,7 +4,7 @@
 // See the accompanying LICENSE file for terms.
 //
 
-package github.com.javaminusminus.simplebdd;
+package github.com.jminusminus.simplebdd;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.InvocationTargetException;

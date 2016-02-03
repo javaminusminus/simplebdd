@@ -1,12 +1,12 @@
 # SimpleBDD
 
-[![Build Status](https://travis-ci.org/javaminusminus/simplebdd.svg?branch=master)](https://travis-ci.org/javaminusminus/simplebdd)
+[![Build Status](https://travis-ci.org/jminusminus/simplebdd.svg?branch=master)](https://travis-ci.org/jminusminus/simplebdd)
 
-Super simple behavior-driven development style test writer for [Java--](https://github.com/javaminusminus/jmm).
+Super simple behavior-driven development style test writer for [Jmm](https://github.com/jminusminus/jmm).
 
 ## Install
 
-    jmm get github.com/javaminusminus/simplebdd
+    jmm get github.com/jminusminus/simplebdd
 
 ## Usage
 
@@ -16,7 +16,7 @@ Create a test file.
 // My_test.java
 package path.to.package;
 
-import github.com.javaminusminus.simplebdd.Test;
+import github.com.jminusminus.simplebdd.Test;
 
 public class My_test extends Test {
     public static void main(String[] args) {
@@ -37,7 +37,7 @@ Run the jmm test command.
 
 Read the results.
 
-    github.com.javaminusminus.jmmexample.Helloworld_test
+    github.com.jminusminus.jmmexample.Helloworld_test
 
         ✓ should return the congratulations text
 
