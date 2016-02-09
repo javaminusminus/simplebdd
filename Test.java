@@ -6,22 +6,19 @@
 
 package github.com.jminusminus.simplebdd;
 
-import java.lang.reflect.Method;
-import java.lang.reflect.InvocationTargetException;
-
 public class Test {
 
-    protected Method before;
-    protected Method beforeEach;
-    protected Method after;
-    protected Method afterEach;
-    protected Method[] tests = new Method[0];
+    protected java.lang.reflect.Method before;
+    protected java.lang.reflect.Method beforeEach;
+    protected java.lang.reflect.Method after;
+    protected java.lang.reflect.Method afterEach;
+    protected java.lang.reflect.Method[] tests = new java.lang.reflect.Method[0];
     protected Result[] results = new Result[0];
 
     public void run() {
-        Method[] methods = this.getClass().getDeclaredMethods();
+        java.lang.reflect.Method[] methods = this.getClass().getDeclaredMethods();
         for (int i = 0; i < methods.length; i++) {
-            Method method = methods[i];
+            java.lang.reflect.Method method = methods[i];
             if (method.getName().startsWith("test")) {
                 this.addTest(method);
             } else if (method.getName().equals("before")) {
@@ -70,9 +67,9 @@ public class Test {
         System.exit(failures);
     }
 
-    protected void addTest(Method v) {
+    protected void addTest(java.lang.reflect.Method v) {
         int len = this.tests.length;
-        Method[] a = new Method[len + 1];
+        java.lang.reflect.Method[] a = new java.lang.reflect.Method[len + 1];
         a[len] = v;
         for (int i = 0; i < len; i++ ) {
             a[i] = this.tests[i];
@@ -108,14 +105,14 @@ public class Test {
         this.executeAfter();
     }
 
-    protected void executeTest(Method method) {
+    protected void executeTest(java.lang.reflect.Method method) {
         this.executeBeforeEach();
         try {
             method.invoke(this);
         } catch (IllegalAccessException e) {
             this.resultFailure();
             System.out.println(e.getCause());
-        } catch (InvocationTargetException e) {
+        } catch (java.lang.reflect.InvocationTargetException e) {
             this.resultFailure();
             System.out.println(e.getCause());
             e.printStackTrace(System.out);
@@ -131,7 +128,7 @@ public class Test {
             this.before.invoke(this);
         } catch (IllegalAccessException e) {
             System.out.println(e.getCause());
-        } catch (InvocationTargetException e) {
+        } catch (java.lang.reflect.InvocationTargetException e) {
             System.out.println(e.getCause());
             e.printStackTrace(System.out);
         }
@@ -145,7 +142,7 @@ public class Test {
             this.after.invoke(this);
         } catch (IllegalAccessException e) {
             System.out.println(e.getCause());
-        } catch (InvocationTargetException e) {
+        } catch (java.lang.reflect.InvocationTargetException e) {
             System.out.println(e.getCause());
             e.printStackTrace(System.out);
         }
@@ -159,7 +156,7 @@ public class Test {
             this.beforeEach.invoke(this);
         } catch (IllegalAccessException e) {
             System.out.println(e.getCause());
-        } catch (InvocationTargetException e) {
+        } catch (java.lang.reflect.InvocationTargetException e) {
             System.out.println(e.getCause());
             e.printStackTrace(System.out);
         }
@@ -173,7 +170,7 @@ public class Test {
             this.afterEach.invoke(this);
         } catch (IllegalAccessException e) {
             System.out.println(e.getCause());
-        } catch (InvocationTargetException e) {
+        } catch (java.lang.reflect.InvocationTargetException e) {
             System.out.println(e.getCause());
             e.printStackTrace(System.out);
         }
