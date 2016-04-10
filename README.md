@@ -1,12 +1,15 @@
-# SimpleBDD
-
+# Test
+#### Package: github.com.jminusminus.simplebdd
 [![Build Status](https://travis-ci.org/jminusminus/simplebdd.svg?branch=master)](https://travis-ci.org/jminusminus/simplebdd)
-
+## Stability: 1 - Stable
 Super simple behavior-driven development style test writer for [Jmm](https://github.com/jminusminus/jmm).
 
 ## Install
-
-    jmm get github.com/jminusminus/simplebdd
+```
+jmm get github.com/jminusminus/simplebdd
+```
+## github.com.jminusminus.simplebdd.Test
+The default test runner for Jmm.
 
 ## Usage
 
@@ -20,13 +23,13 @@ import github.com.jminusminus.simplebdd.Test;
 
 public class My_test extends Test {
     public static void main(String[] args) {
-        My_test test = new My_test();
-        test.run();
+         My_test test = new My_test();
+         test.run();
     }
 
     public void testThatThisIsTrue() {
-        this.should("return that boolean matches boolean");
-        this.assertEqual(true, true);
+         this.should("return that boolean matches boolean");
+         this.assertEqual(true, true);
     }
 }
 ```
@@ -39,75 +42,34 @@ Read the results.
 
     github.com.jminusminus.jmmexample.Helloworld_test
 
-        ✓ should return the congratulations text
+         ✓ should return the congratulations text
 
     ✓ 1 tests complete
 
-### Extend Test
+## Extend Test
 
 To create a test extend the Test class and create an instance of it in the main method.
 
 ```java
 public class My_test extends Test {
     public static void main(String[] args) {
-        My_test test = new My_test();
-        test.run();
+         My_test test = new My_test();
+         test.run();
     }
 }
 ```
 
-### testXXX()
+## test_xxx()
 
 Any method that starts with "test" will be executed by SimpleBDD.
 
 ```java
-public void testName() {
+public void test_name() {
     // Test code
 }
 ```
 
-#### run()
-
-Runs the test by calling each method that begins with "test" outputting the results to `System.out`. The command will exit with the number of failed tests.
-
-```java
-public static void main(String[] args) {
-    My_test test = new My_test();
-    test.run();
-}
-```
-
-#### should()
-
-Adds a description of what the preceding code "should" do.
-
-```java
-public void testName() {
-    this.should("return that boolean matches boolean");
-}
-```
-
-#### assertEqual()
-
-Used to test if two types are the same. Supported types are Short, Int, Long, Float, Double, Boolean, Char and String.
-
-```java
-public void testName() {
-    this.assertEqual(true, true);
-}
-```
-
-#### assertNotEqual()
-
-Used to test if two types are NOT the same. Supported types are Short, Int, Long, Float, Double, Boolean, Char and String.
-
-```java
-public void testName() {
-    this.assertNotEqual(false, true);
-}
-```
-
-### before()
+## before()
 
 Method called before any test is executed.
 
@@ -117,7 +79,7 @@ public void before() {
 }
 ```
 
-### beforeEach()
+## beforeEach()
 
 Method called before each test is executed.
 
@@ -127,7 +89,7 @@ public void beforeEach() {
 }
 ```
 
-### after()
+## after()
 
 Method called after all tests have executed.
 
@@ -137,7 +99,7 @@ public void after() {
 }
 ```
 
-### afterEach()
+## afterEach()
 
 Method called after each test has executed.
 
@@ -146,3 +108,44 @@ public void afterEach() {
     // Cleanup code
 }
 ```
+
+```
+import github.com.jminusminus.simplebdd.Test;
+```
+## void run()
+Runs the test by calling each method that begins with "test" outputting the results to `System.out`. The command will exit with the number of failed tests.
+
+```java
+public static void main(String[] args) {
+    My_test test = new My_test();
+    test.run();
+}
+```
+
+## void should(String should)
+Adds a description of what the preceding code "should" do.
+
+```java
+public void test_boolean_is_boolean() {
+    this.should("return that boolean matches boolean");
+}
+```
+
+## boolean assertEqual(Object a, Object b)
+Used to test if two types are the same. Supported types are Short, Int, Long, Float, Double, Boolean, Char and String.
+
+```java
+public void testName() {
+    this.assertEqual(true, true);
+}
+```
+
+## boolean assertNotEqual(Object a, Object b)
+Used to test if two types are NOT the same. Supported types are Short, Int, Long, Float, Double, Boolean, Char and String.
+
+```java
+public void testName() {
+    this.assertNotEqual(false, true);
+}
+```
+
